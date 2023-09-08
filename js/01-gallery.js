@@ -5,7 +5,6 @@ listEl.insertAdjacentHTML("beforeend", createMarkup(galleryItems));
 
 listEl.addEventListener("click", onItemClick);
 
-
 function createMarkup(gallery) {
   return gallery
     .map(({ preview, original, description }) => {
@@ -25,7 +24,6 @@ function createMarkup(gallery) {
     .join("");
 }
 
-
 function onItemClick(ev) {
   ev.preventDefault();
   if (!ev.target.classList.contains("gallery__image")) {
@@ -41,7 +39,7 @@ function onItemClick(ev) {
   /* Тут для закриття модалки по ESC інших способів як оголосити функцію
    в функції я не придумав, а якщо оголошувати через function functionName() виглядає
    взагалі дико😁.
-   (перепробував я багато чого, знаю що є простіше краще рішення але не допер)
+   (перепробував я багато чого, знаю що є простіше і краще рішення, але не допер)
   */
   const onEscClick = function (ev) {
     if (ev.key === "Escape" && ev.code === "Escape") {
